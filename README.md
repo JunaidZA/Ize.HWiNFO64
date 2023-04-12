@@ -7,3 +7,4 @@ Installation:
 3. Install the plugin and configure the refresh time for the sensors
 
 Done.
+The plugin will now fetch all the sensordata you selected and offer them as variables to use to your liking.
