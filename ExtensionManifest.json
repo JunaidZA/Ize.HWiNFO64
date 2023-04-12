@@ -1,0 +1,10 @@
+﻿{
+  "type": "Plugin",
+  "name": "Macro-Deck HWiNFO64 Plugin",
+  "author": "Ize",
+  "repository" : "https://github.com/Ize83/Ize.HWiNFO64",
+  "packageId": "Ize.HWiNFO64",
+  "version": "1.0.0",
+  "target-plugin-api-version": 35,
+  "dll": "HWiNFO64.dll"
+}
