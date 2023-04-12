@@ -56,9 +56,14 @@ namespace HWiNFO64_Plugin
         private void lameTimer_Tick(object sender, EventArgs e)
         {
             angle += rotSpeed;
-            int x = (int)(origin.X + distance * Math.Sin(angle /2 * Math.PI / 180f));
-            int y = (int)(origin.Y + distance * Math.Cos(angle *2 * Math.PI / 180f));
+            int x = (int)(origin.X + distance * Math.Sin(angle / 2 * Math.PI / 180f));
+            int y = (int)(origin.Y + distance * Math.Cos(angle * 2 * Math.PI / 180f));
             izeLogo.Location = new Point(x, y);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("explorer", "https://github.com/Ize83/Ize.HWiNFO64");
         }
     }
 }

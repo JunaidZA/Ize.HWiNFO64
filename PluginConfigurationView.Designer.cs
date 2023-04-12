@@ -40,6 +40,7 @@
             label3 = new System.Windows.Forms.Label();
             refreshTimeInput = new System.Windows.Forms.NumericUpDown();
             lameTimer = new System.Windows.Forms.Timer(components);
+            linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)izeLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)refreshTimeInput).BeginInit();
             SuspendLayout();
@@ -102,7 +103,7 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = System.Drawing.Color.Cyan;
-            linkLabel1.Location = new System.Drawing.Point(254, 426);
+            linkLabel1.Location = new System.Drawing.Point(239, 426);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new System.Drawing.Size(131, 15);
             linkLabel1.TabIndex = 6;
@@ -115,13 +116,13 @@
             textBox1.BackColor = System.Drawing.Color.Black;
             textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             textBox1.ForeColor = System.Drawing.Color.Red;
-            textBox1.Location = new System.Drawing.Point(12, 82);
+            textBox1.Location = new System.Drawing.Point(12, 71);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new System.Drawing.Size(358, 41);
+            textBox1.Size = new System.Drawing.Size(358, 59);
             textBox1.TabIndex = 7;
-            textBox1.Text = "Important: Please restart Macro-Deck if you change any settings or add new sensors in HWiNFO64";
+            textBox1.Text = "Important: Make sure you have HWiNFO64 installed and please restart Macro-Deck if you change any settings or add new sensors in HWiNFO64";
             textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -153,12 +154,25 @@
             lameTimer.Interval = 50;
             lameTimer.Tick += lameTimer_Tick;
             // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.LinkColor = System.Drawing.Color.Cyan;
+            linkLabel2.Location = new System.Drawing.Point(237, 35);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new System.Drawing.Size(133, 15);
+            linkLabel2.TabIndex = 10;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Click here for setup info";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            // 
             // PluginConfigurationView
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Black;
-            ClientSize = new System.Drawing.Size(397, 450);
+            ClientSize = new System.Drawing.Size(382, 450);
+            Controls.Add(linkLabel2);
             Controls.Add(SaveSettingsButton);
             Controls.Add(refreshTimeInput);
             Controls.Add(label3);
@@ -195,5 +209,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown refreshTimeInput;
         private System.Windows.Forms.Timer lameTimer;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
