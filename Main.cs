@@ -55,10 +55,6 @@ namespace Ize.HWiNFO64_Plugin
             sensorTimer.Elapsed += SensorTimer_Elapsed;
             sensorTimer.Start();
 
-            this.Actions = new List<PluginAction>
-            {
-                new ShowSensors(),
-            };
         }
 
         private void SensorTimer_Elapsed(object sender, ElapsedEventArgs e)
@@ -79,31 +75,5 @@ namespace Ize.HWiNFO64_Plugin
             }
         }
     }
-
-    public class ShowSensors : PluginAction
-    {
-        public override string Name => "Show Sensors";
-        public override string Description => "Displays the currently available sensors.";
-        public override void Trigger(string clientId, ActionButton actionButton)
-        {
-            //VariableManager.SetValue("SpeedtestActive", true, VariableType.Bool, SpeedtestPlugin.Instance, true);
-            DisplaySensors();
-        }
-
-        private async void DisplaySensors()
-        {
-            try
-            {
-                MacroDeckLogger.Error(HWiNFO64Plugin.Instance, "Geht");
-                //generate html overview here...
-            }
-            catch (System.Exception ex)
-            {
-                MacroDeckLogger.Error(HWiNFO64Plugin.Instance, ex.Message);
-            }
-        }
-    }
-
-
 
 }

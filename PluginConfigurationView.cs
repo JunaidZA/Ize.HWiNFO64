@@ -8,9 +8,9 @@ using System.Reflection.Metadata;
 using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
-using HWiNFO64_Plugin;
 using Ize.HWiNFO64_Plugin;
 using SuchByte.MacroDeck.Plugins;
+
 
 namespace HWiNFO64_Plugin
 {
@@ -65,5 +65,30 @@ namespace HWiNFO64_Plugin
         {
             Process.Start("explorer", "https://github.com/Ize83/Ize.HWiNFO64");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            Microsoft.Win32.RegistryKey registryPath = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"Software\HWiNFO64\VSB");
+            for (int i = 0; i < HWiNFO64Plugin.sensors; i++)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = i.ToString();
+                item.SubItems.Add(registryPath.GetValue("Sensor" + i).ToString());
+                item.SubItems.Add(registryPath.GetValue("Label" + i).ToString());
+                item.SubItems.Add(registryPath.GetValue("Value" + i).ToString());
+                item.SubItems.Add(registryPath.GetValue("ValueRaw" + i).ToString());
+
+                item.Font = new Font(item.Font, FontStyle.Regular);
+                listView1.Items.Add(item);
+            }
+
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+            this.Width = 1091;
+        }
     }
+
 }

@@ -41,6 +41,13 @@
             refreshTimeInput = new System.Windows.Forms.NumericUpDown();
             lameTimer = new System.Windows.Forms.Timer(components);
             linkLabel2 = new System.Windows.Forms.LinkLabel();
+            button1 = new System.Windows.Forms.Button();
+            listView1 = new System.Windows.Forms.ListView();
+            columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            columnHeader5 = new System.Windows.Forms.ColumnHeader();
             ((System.ComponentModel.ISupportInitialize)izeLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)refreshTimeInput).BeginInit();
             SuspendLayout();
@@ -166,12 +173,61 @@
             linkLabel2.Text = "Click here for setup info";
             linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(152, 6);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(89, 23);
+            button1.TabIndex = 11;
+            button1.Text = "Show sensors";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // listView1
+            // 
+            listView1.BackColor = System.Drawing.Color.FromArgb(24, 24, 24);
+            listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
+            listView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            listView1.ForeColor = System.Drawing.Color.White;
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
+            listView1.HideSelection = false;
+            listView1.Location = new System.Drawing.Point(388, 12);
+            listView1.MultiSelect = false;
+            listView1.Name = "listView1";
+            listView1.Size = new System.Drawing.Size(675, 426);
+            listView1.TabIndex = 12;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Sensor";
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Label";
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Value";
+            // 
+            // columnHeader5
+            // 
+            columnHeader5.Text = "Raw Value";
+            // 
             // PluginConfigurationView
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Black;
-            ClientSize = new System.Drawing.Size(382, 450);
+            ClientSize = new System.Drawing.Size(384, 450);
+            Controls.Add(listView1);
+            Controls.Add(button1);
             Controls.Add(linkLabel2);
             Controls.Add(SaveSettingsButton);
             Controls.Add(refreshTimeInput);
@@ -210,5 +266,12 @@
         private System.Windows.Forms.NumericUpDown refreshTimeInput;
         private System.Windows.Forms.Timer lameTimer;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
