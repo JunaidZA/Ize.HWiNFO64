@@ -33,5 +33,13 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Dev\Ize.HWiNFO64\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Dev\Ize.HWiNFO64\.editorconfig" />
+  </ItemGroup>
+
 
 </Project>
