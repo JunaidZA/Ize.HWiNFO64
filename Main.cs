@@ -1,16 +1,8 @@
-﻿using SuchByte.MacroDeck;
-using SuchByte.MacroDeck.ActionButton;
-using SuchByte.MacroDeck.GUI;
-using SuchByte.MacroDeck.GUI.CustomControls;
-using SuchByte.MacroDeck.Logging;
+﻿using HWiNFO64_Plugin;
 using SuchByte.MacroDeck.Plugins;
 using SuchByte.MacroDeck.Variables;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using Microsoft.Win32;
+using System.Text.RegularExpressions;
 using System.Timers;
-using HWiNFO64_Plugin;
 
 namespace Ize.HWiNFO64_Plugin
 {

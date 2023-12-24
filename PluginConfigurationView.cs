@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Ize.HWiNFO64_Plugin;
+using System;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Reflection.Metadata;
-using System.Security.Policy;
-using System.Text;
 using System.Windows.Forms;
-using Ize.HWiNFO64_Plugin;
-using SuchByte.MacroDeck.Plugins;
 
 
 namespace HWiNFO64_Plugin
