@@ -11,6 +11,7 @@ using System.Drawing;
 using Microsoft.Win32;
 using System.Timers;
 using HWiNFO64_Plugin;
+using System.Text.RegularExpressions;
 
 namespace Ize.HWiNFO64_Plugin
 {
@@ -62,8 +63,11 @@ namespace Ize.HWiNFO64_Plugin
 
             for (int i = 0; i < sensors; i++)
             {
+                // labels can contain values that will break cottle
+                string label = (string)registryPath.GetValue("Label" + i);
+                string checked_label = Regex.Replace(label, @"[\(\)]", "-");
                 //set all values as string cause HWiNFO64 already formatted them for us
-                VariableManager.SetValue("hwi64_" + (string)registryPath.GetValue("Label" + i), (string)registryPath.GetValue("Value" + i), VariableType.String, HWiNFO64Plugin.Instance, true);
+                VariableManager.SetValue("hwi64_" + checked_label, (string)registryPath.GetValue("Value" + i), VariableType.String, HWiNFO64Plugin.Instance, true);
             }
         }
 
