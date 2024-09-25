@@ -65,7 +65,7 @@ namespace Ize.HWiNFO64_Plugin
             {
                 // labels can contain values that will break cottle
                 string label = (string)registryPath.GetValue("Label" + i);
-                string checked_label = Regex.Replace(label, "\(\)", "-");
+                string checked_label = Regex.Replace(label, @"[\(\)]", "-");
                 //set all values as string cause HWiNFO64 already formatted them for us
                 VariableManager.SetValue("hwi64_" + checked_label, (string)registryPath.GetValue("Value" + i), VariableType.String, HWiNFO64Plugin.Instance, true);
             }
